@@ -9,6 +9,17 @@ class csort{
         }
         return x;
     }
+    public int rd(int[] nums) {
+        if(nums.length==0) return 0;
+        int i=0;
+        for(int y=0;y<nums.length;y++){
+            if(nums[i]!=nums[y]){
+                i++;
+                nums[i]=nums[y];
+            }
+        }
+        return i+1;
+    }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         
@@ -21,6 +32,6 @@ class csort{
             arr[i]=sc.nextInt();
         }
         boolean x=sort(arr);
-        System.out.println("Sorted: "+x);
+        System.out.println("Sorted: "+x+"\n size after removing Duplicates"+rd(arr));
     }
 }
