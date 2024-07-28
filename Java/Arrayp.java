@@ -1,8 +1,23 @@
-package Java;
 
 import java.util.*;
 class Arrayp {
-
+    public static int single(int []a){
+        int ma=0;
+        int mi=-1;
+        for(int i=0;i<a.length;i++){
+            ma=Math.max(ma,a[i]);
+        }
+        int []h = new int[ma+1];
+        for(int i=0;i<ma;i++){
+            h[a[i]]++;
+        }
+        for(int k=0;k<ma;k++){
+            if(h[k]==1) {
+                mi=k;
+            }
+        }
+        return mi;
+    }
     public static int fmissingnuminsortedarray(int[] a) {
         int n = a.length;
         int sum = (n * (n + 1))/2;
@@ -77,6 +92,8 @@ class Arrayp {
     }
 
     public static void main(String[] args) {
+        int []te={1,1,2,2,3,4,4,5,5};
+        System.out.println("Single time appered element: "+single(te));
         int[] v = {1, 0, 3, 6, 0, 2};
         int[] x = movez(v);
         for (int i : x) {
@@ -113,7 +130,9 @@ class Arrayp {
                 pl[i]=si.nextInt();
 
             }
+            
             System.out.println("Element is : "+fmissingnuminsortedarray(pl));
+            
             si.close();
 
         } catch (Exception e) {
