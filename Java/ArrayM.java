@@ -1,5 +1,4 @@
-
-
+import java.util.*;
 class ArrayM{
     public static String tsum(int [] a,int k){
         Arrays.sort(a);
