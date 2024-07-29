@@ -1,1 +1,1 @@
-Solutions for some of the HackerRank problems in C++,Java,Python,C,Js. 
+Solutions for some of the coding problems in C++,Java,Python,C,Js. 
