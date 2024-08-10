@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+struct Node {
+	int data;
+	Node* next;
+};
+class Linked {
+	private:
+		Node* root;
+		int count;
+	public:
+		void crotate(){
+			node * temp=root;
+			int x=temp->next->data;
+			//node* a=temp->next;
+			while(temp->next!=nullptr){
+				temp=temp->next;
+			}
+			temp->next=root;
+			while(temp->next->data!=x){
+				temp=temp->next;
+			}
+			temp->next=NULL;
+			root=temp;
+			node * tem=root;
+			while(tem!=NULL){
+				cout<<tem->data<<" --> ";
+			}
+			
+			
+		}	
+};
